@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Alexandre Trister - Portfolio showcasing 3D modeling, coding, electronics, and 3D printing projects with futuristic design"
+    />
+    <meta
+      name="keywords"
+      content="Alexandre Trister, 3D modeling, Blender, Fusion 360, coding, electronics, 3D printing, portfolio"
+    />
+    <meta name="author" content="Alexandre Trister" />
+    <title>Alexandre Trister - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-purple-500/30"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold text-cyan-400 font-orbitron">
+            Alexandre Trister
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#about"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >About</a
+            >
+            <a
+              href="#3d-modeling"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >3D Modeling</a
+            >
+            <a
+              href="#coding"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >Coding</a
+            >
+            <a
+              href="#electronics"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >Electronics</a
+            >
+            <a
+              href="#3d-printing"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >3D Printing</a
+            >
+            <a
+              href="#social"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >Connect</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-cyan-400 hover:text-purple-400 transition-colors"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#about"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >About</a
+            >
+            <a
+              href="#3d-modeling"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >3D Modeling</a
+            >
+            <a
+              href="#coding"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >Coding</a
+            >
+            <a
+              href="#electronics"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >Electronics</a
+            >
+            <a
+              href="#3d-printing"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >3D Printing</a
+            >
+            <a
+              href="#social"
+              class="nav-link text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >Connect</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20"
+      ></div>
+      <div class="stars"></div>
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <h1
+          class="text-6xl md:text-8xl font-bold mb-6 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse"
+        >
+          Alexandre Trister
+        </h1>
+        <p
+          class="text-xl md:text-2xl mb-8 text-gray-300 font-exo animate-fade-in-up"
+        >
+          3D Modeler • Developer • Electronics Enthusiast • Maker
+        </p>
+        <div class="flex justify-center space-x-4 mb-12">
+          <div class="skill-orb">3D Modeling</div>
+          <div class="skill-orb">Coding</div>
+          <div class="skill-orb">Electronics</div>
+          <div class="skill-orb">3D Printing</div>
+        </div>
+        <a
+          href="#about"
+          class="cta-button inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full text-white font-semibold hover:from-cyan-400 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+        >
+          Explore My Universe
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-6 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+          >
+            Who I Am
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto mb-8"
+          ></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="glass-card p-8 md:p-12 rounded-2xl">
+            <p
+              class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-exo"
+            >
+              Welcome to my digital universe! I'm Alexandre Trister, a
+              passionate creator who bridges the gap between imagination and
+              reality through technology. With expertise spanning 3D modeling,
+              software development, electronics engineering, and 3D printing, I
+              bring ideas to life in both virtual and physical realms.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <div class="space-y-4">
+                <h3 class="text-2xl font-bold text-cyan-400 font-orbitron">
+                  Technical Expertise
+                </h3>
+                <ul class="space-y-2 text-gray-300">
+                  <li class="flex items-center">
+                    <span class="text-purple-400 mr-2">▶</span>3D Modeling
+                    (Blender, Fusion 360)
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-purple-400 mr-2">▶</span>Some Experience
+                    with Python, Lua, JS, HTML and CSS
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-purple-400 mr-2">▶</span>Electronics & CAD
+                    Design
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-purple-400 mr-2">▶</span>3D Printing (360+
+                    hours experience)
+                  </li>
+                </ul>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-2xl font-bold text-cyan-400 font-orbitron">
+                  Get In Touch
+                </h3>
+                <div class="space-y-3 text-gray-300">
+                  <p>
+                    Interested in collaborating or learning more about my work?
+                    Feel free to reach out through the social media platforms
+                    below or connect with me on professional networks.
+                  </p>
+                  <div class="flex items-center">
+                    <span class="text-purple-400 mr-3">🌐</span>
+                    <span
+                      >Available for professional inquiries and
+                      collaborations</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Modeling Section -->
+    <section id="3d-modeling" class="py-20 relative">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-6 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+          >
+            3D Modeling
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto mb-8"
+          ></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto font-exo">
+            Crafting digital worlds and objects with precision using Blender and
+            Fusion 360
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/3d-modeling/Screenshot 2025-08-15 171926.jpg"
+                alt="Beach Scene Render"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Beach Scene Render
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Photorealistic beach environment with advanced lighting and
+                  materials
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/3d-modeling/Screenshot 2025-08-15 172524.jpg"
+                alt="Space Scene with Spacecraft"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Space Scene with Spacecraft
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Futuristic spacecraft design in cosmic environment
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/3d-modeling/Untitled.jpg"
+                alt="Candy Dispenser Model"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Templat Helmet Model
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Realistic 3D model of a Templar helmet with unique features
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/3d-modeling/unnamed.jpg"
+                alt="Planet Scene"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Planet Scene
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Detailed planetary environment with atmospheric effects
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coding Section -->
+    <section id="coding" class="py-20 relative">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-6 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+          >
+            Coding Projects
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto mb-8"
+          ></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto font-exo">
+            Building interactive applications and games with modern technologies
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/coding/Screenshot 2025-08-15 171352.jpg"
+                alt="Othello/Reversi Game"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Othello/Reversi Game
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Interactive two-player game in Lua
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/coding/Screenshot 2025-08-15 174229.jpg"
+                alt="Trivia Bot"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Trivia Bot
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Discord bot for that generates trivial pursuit cards using an
+                  API
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/coding/Screenshot 2025-08-15 174333.jpg"
+                alt="Gamble Bot"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Gamble Bot
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Entertainment bot with a gambling mini-game
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Electronics & CAD Section -->
+    <section id="electronics" class="py-20 relative">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-6 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+          >
+            Electronics & CAD
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto mb-8"
+          ></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto font-exo">
+            Designing and building electronic systems with precision engineering
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/electronics/PXL_20250813_153948756.jpg"
+                alt="Robotic Arm"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Custom watchband
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  fully 3d printed watchband for Omi device
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/electronics/PXL_20240822_195414001.jpg"
+                alt="Custom Watch"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Robotic Arm
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Controllable robotic device with a gripper
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/electronics/PXL_20250815_213516486.jpg"
+                alt="Automatic Fan"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Automatic Fan
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Smart cooling system with temperature sensors
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Printing Section -->
+    <section id="3d-printing" class="py-20 relative">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-6 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+          >
+            3D Printing
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto mb-8"
+          ></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto font-exo">
+            360+ hours of precision manufacturing with Bambu Lab P1S <br />
+            Examples:
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/3d-printing/PXL_20240822_153545487.jpg"
+                alt="Geometric Object"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Geometric Art
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Complex geometric structure showcasing precision printing
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group">
+            <div class="relative overflow-hidden rounded-xl">
+              <img
+                src="images/3d-printing/PXL_20250815_213258241.jpg"
+                alt="Fan Components"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <h3 class="text-xl font-bold text-white mb-2 font-orbitron">
+                  Candy / Pill Dispenser
+                </h3>
+                <p class="text-gray-200 text-sm">
+                  Functional mechanical parts for various systems
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <div class="glass-card inline-block p-6 rounded-xl">
+            <div class="text-3xl font-bold text-cyan-400 font-orbitron mb-2">
+              360+
+            </div>
+            <div class="text-gray-300">Hours of 3D Printing Experience</div>
+            <div class="text-sm text-purple-400 mt-2">Bambu Lab P1S</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social" class="py-20 relative">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-6 font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+          >
+            Connect
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto mb-8"
+          ></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto font-exo">
+            Let's build the future together through collaboration and innovation
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="glass-card p-8 rounded-xl text-center">
+            <div class="text-6xl mb-6">🌐</div>
+            <h3 class="text-3xl font-bold text-cyan-400 mb-6 font-orbitron">
+              Connect & Collaborate
+            </h3>
+            <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              I'm always excited to connect with fellow creators, developers,
+              and makers. Whether you're interested in collaborating on a
+              project, discussing new technologies, or sharing ideas about 3D
+              modeling, coding, electronics, or 3D printing, I'd love to hear
+              from you.
+            </p>
+            <div class="grid md:grid-cols-3 gap-6 mt-8">
+              <div class="text-center">
+                <div class="text-3xl mb-2">🤝</div>
+                <h4 class="text-lg font-semibold text-cyan-400 mb-2">
+                  Collaboration
+                </h4>
+                <p class="text-sm text-gray-400">
+                  Open to project partnerships and creative collaborations
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl mb-2">💡</div>
+                <h4 class="text-lg font-semibold text-cyan-400 mb-2">
+                  Innovation
+                </h4>
+                <p class="text-sm text-gray-400">
+                  Always exploring new technologies and creative solutions
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl mb-2">🚀</div>
+                <h4 class="text-lg font-semibold text-cyan-400 mb-2">Growth</h4>
+                <p class="text-sm text-gray-400">
+                  Committed to continuous learning and skill development
+                </p>
+              </div>
+            </div>
+            <h3
+              class="text-3xl font-bold text-cyan-400 mb-6 font-orbitron""
+              id="Socials "
+            >
+              <br />Socials:
+        </h3>
+        <div class="space-y-4">
+                
+                <ul class="space-y-2 text-gray-300">
+                  <li class="flex items-center">
+                    <span class="text-purple-400 mr-2">▶</span>TikTok: @thecanadianengineer_4
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-purple-400 mr-2">▶</span>YouTube: @The_Canadian_Engineer
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-purple-400 mr-2">▶</span>GitHub: TheCanadianEngineer
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-purple-400 mr-2">▶</span>Discord: the_canadian_engineer
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-purple-400 mr-2">▶</span>Email me: alexthetrister@gmail.com
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-purple-400 mr-2">▶</span>Telegram: Alexandre Trister
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-purple-500/30">
+      <div class="container mx-auto px-6 text-center">
+        <div class="text-2xl font-bold text-cyan-400 mb-4 font-orbitron">
+          Alexandre Trister
+        </div>
+        <p class="text-gray-400 mb-6">
+          Creating the future, one project at a time
+        </p>
+        <div class="flex justify-center space-x-6 mb-6">
+          <span class="text-gray-400">🚀</span>
+          <span class="text-gray-400">💡</span>
+          <span class="text-gray-400">🌟</span>
+        </div>
+        <p class="text-sm text-gray-500">
+          © 2025 Alexandre Trister. All rights reserved.
+        </p>
+        <p class="text-sm text-gray-500">
+          This Website was generated using the Rabbit Intern Agent
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
